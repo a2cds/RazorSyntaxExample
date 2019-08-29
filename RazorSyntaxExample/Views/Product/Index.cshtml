@@ -11,5 +11,16 @@
     <title>Index</title>
 </head>
 <body>
+    @foreach(KeyValuePair<string,int> pp in ViewBag.ProductPrices)
+    {
+        <p>
+            <div>
+                Nome do Produto: @pp.Key
+            </div>
+            <div>
+                Preço do Produto com Taxa: @(pp.Value * 1.2)
+            </div>
+        </p>
+    }
 </body>
 </html>
